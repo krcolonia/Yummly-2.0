@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  <em>Yummly is a Recipe App catered to those who wish to learn Authentic Filipino Cuisine.</em>
+  <em>Yummly is a Recipe App catered to those who wish to learn Authentic Filipino Cuisine.</em><br><br>
 </div>
 
 
