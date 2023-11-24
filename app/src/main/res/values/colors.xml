@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="black">#FF000000</color>
+  <color name="white">#FFFFFFFF</color>
+  <color name="transparent">#00000000</color>
+  <color name="translucentBlack">#55000000</color>
+
+  <color name="yummlyWhite">#FFF7F1E5</color>
+  <color name="yummlyYellow">#FFFFDE59</color>
+  <color name="yummlyRed">#FFFF3131</color>
+  <color name="yummlyBrown">#FF675D50</color>
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+  <string name="app_name">Yummly 2.0</string>
+
+  <!-- To toggle the open close button of nav drawer -->
+  <string name="nav_open">Open</string>
+  <string name="nav_close">Close</string>
+
+  <string name="viewSubtitle">View Recipes</string>
+  <string name="viewAll">All Recipes</string>
+  <string name="filterRecipe">Filter Recipes</string>
+  <string name="myRecipe">My Recipes</string>
+
+  <string name="helpOpt">Help</string>
+  <string name="about">About Us</string>
+
+  <string name="foodPlacehold">FOOD NAME</string>
+</resources>

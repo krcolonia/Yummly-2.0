@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <item
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:title="@string/viewSubtitle">
+      <menu
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <item
+          android:id="@+id/nav_allRecipe"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:icon="@drawable/icon_list"
+          android:title="@string/viewAll" />
+        <item
+          android:id="@+id/nav_filterRecipe"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:icon="@drawable/icon_filter"
+          android:title="@string/filterRecipe" />
+        <item
+          android:id="@+id/nav_userRecipe"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:icon="@drawable/icon_userlist"
+          android:title="@string/myRecipe" />
+      </menu>
+    </item>
+  </group>
+
+  <group
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <item
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:icon="@drawable/icon_help"
+      android:title="@string/helpOpt" />
+    <item
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:icon="@drawable/icon_about"
+      android:title="@string/about" />
+  </group>
+</menu>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "42851416182",
+    "project_id": "yummlydk-e4fa8",
+    "storage_bucket": "yummlydk-e4fa8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42851416182:android:2d0f401e1a61f2893fc757",
+        "android_client_info": {
+          "package_name": "com.appdev.yummly2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd-u7-tk39YbAe9ocKHUq8JSO2Nq2AOgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
