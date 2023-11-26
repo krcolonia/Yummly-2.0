@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Fallback for old browsers -->
+    <item>
+        <color android:color="#F7971E" />
+    </item>
+
+    <!-- Chrome 10-25, Safari 5.1-6 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="0"
+                android:startColor="#FFD200"
+                android:endColor="#F7971E"
+                android:useLevel="false" />
+        </shape>
+    </item>
+
+    <!-- W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="0"
+                android:startColor="#FFD200"
+                android:endColor="#F7971E"
+                android:useLevel="false" />
+        </shape>
+    </item>
+
+</layer-list>

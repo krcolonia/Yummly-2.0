@@ -13,7 +13,7 @@ import com.example.yummly_20.databinding.ActivitySplashScreenBinding
 class SplashScreen : AppCompatActivity() {
 
     private val SPLASH_TIME: Long = 10000
-    private val TEXT_CHANGE_INTERVAL: Long = 1000 // 0.5 seconds
+    private val TEXT_CHANGE_INTERVAL: Long = 2500 // 0.5 seconds
     private lateinit var binding: ActivitySplashScreenBinding
     private val textList = listOf(
         "Try our delicious recipes!",
@@ -62,7 +62,7 @@ class SplashScreen : AppCompatActivity() {
 
         // Delayed start of MainActivity
         Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, AboutUs::class.java))
             finish()
         }, SPLASH_TIME)
 

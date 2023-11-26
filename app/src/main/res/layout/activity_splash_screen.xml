@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/gradient_background"
     tools:context=".SplashScreen">
 
     <androidx.cardview.widget.CardView
@@ -29,7 +29,7 @@
             android:layout_width="230dp"
             android:layout_height="250dp"
             android:layout_gravity="center"
-            android:background="@color/white"
+            android:background="@drawable/gradient_background"
             android:foregroundGravity="center"
             android:src="@drawable/yummlythree" />
 
@@ -41,7 +41,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
+        android:textColor="#8F0F0F"
         android:textSize="34sp"
         android:fontFamily="@font/asaturday"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,5 +49,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.7" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="65dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="32dp"
+        android:indeterminateTint="#E81616"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.028" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

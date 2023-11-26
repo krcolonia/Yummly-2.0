@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Yummly_2.0</string>
+    <string name="kurticDesc">  Where developers paint their imagination, turning abstract ideas into functional reality.
+                                Each line is a stroke, and every bug is an opportunity to refine the masterpiece.
+                                Embrace the challenge, for in the realm of coding,
+                                every keystroke is a brushstroke,
+                                crafting the future of technology </string>
+    <string name="dev1">Kurt Robin P. Colonia</string>
+    <string name="dev2">Dominic O. Ramos</string>
+    <string name="footer">This App is created with</string>
 </resources>
