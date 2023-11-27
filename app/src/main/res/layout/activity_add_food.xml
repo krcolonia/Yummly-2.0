@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/gradient_background"
+  tools:context=".AddFoodActivity">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+          android:id="@+id/titleCardView"
+          android:layout_width="0dp"
+          android:layout_height="100dp"
+          android:layout_margin="15dp"
+          app:cardBackgroundColor="@color/yummlyYellow"
+          app:cardCornerRadius="15dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:strokeColor="@color/yummlyBrown"
+          app:strokeWidth="10dp">
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent">
+
+              <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/header"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+              <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:cardBackgroundColor="@color/translucentBlack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+              android:id="@+id/textView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="20dp"
+              android:layout_marginTop="20dp"
+              android:layout_marginEnd="20dp"
+              android:layout_marginBottom="15dp"
+              android:text="@string/addTitle"
+              android:textColor="@color/yummlyWhite"
+              android:textSize="34sp"
+              android:textStyle="bold"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/inputLayout"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_margin="15dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/titleCardView">
+
+          <com.google.android.material.card.MaterialCardView
+            android:id="@+id/imagePreviewCard"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            app:cardBackgroundColor="@color/translucentBlack"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/yummlyBrown"
+            app:strokeWidth="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <ImageView
+                android:id="@+id/foodImg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/food_placeholder" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+            android:id="@+id/selectImageCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25dp"
+            app:cardBackgroundColor="@color/yummlyWhite"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagePreviewCard"
+            app:strokeColor="@color/yummlyBrown"
+            app:strokeWidth="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <TextView
+                android:id="@+id/foodImageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:drawableStart="@drawable/icon_image"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/yummlyBrown"
+                android:paddingTop="4dp"
+                android:text="@string/imageHint"
+                android:textColor="@color/yummlyBrown"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+            android:id="@+id/nameInputCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/yummlyWhite"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectImageCard"
+            app:strokeColor="@color/yummlyBrown"
+            app:strokeWidth="5dp">
+
+            <EditText
+              android:id="@+id/foodNameTxt"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+              android:background="@null"
+              android:drawableStart="@drawable/icon_food"
+              android:drawablePadding="5dp"
+              android:drawableTint="@color/yummlyBrown"
+              android:elegantTextHeight="true"
+              android:hint="@string/nameHint"
+              android:inputType="text"
+              android:padding="5dp"
+              android:textColor="@color/yummlyBrown" />
+          </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/ingredientsLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="15dp"
+          app:layout_constraintTop_toBottomOf="@+id/inputLayout"
+          tools:layout_editor_absoluteX="15dp">
+
+          <com.google.android.material.card.MaterialCardView
+            android:id="@+id/ingredientsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/yummlyWhite"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/yummlyBrown"
+            app:strokeWidth="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="5dp">
+
+              <TextView
+                android:id="@+id/ingredientsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/ingredientsTitle"
+                android:textColor="@color/yummlyBrown"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+              <androidx.cardview.widget.CardView
+                android:id="@+id/ingredientsDivider"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                app:cardBackgroundColor="@color/yummlyRed"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredientsTitle" />
+
+              <EditText
+                android:id="@+id/foodIngredientsTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/ingredientsHint"
+                android:inputType="textMultiLine"
+                android:textColor="@color/yummlyBrown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ingredientsDivider" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+          </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/instructionsLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="15dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/ingredientsLayout">
+
+          <com.google.android.material.card.MaterialCardView
+            android:id="@+id/instructionsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/yummlyWhite"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/yummlyBrown"
+            app:strokeWidth="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="5dp">
+
+              <TextView
+                android:id="@+id/instructionsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/instructionsTitle"
+                android:textColor="@color/yummlyBrown"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+              <androidx.cardview.widget.CardView
+                android:id="@+id/instructionsDivider"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                app:cardBackgroundColor="@color/yummlyRed"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instructionsTitle" />
+
+              <EditText
+                android:id="@+id/foodInstructionsTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/instructionsHint"
+                android:inputType="textMultiLine"
+                android:textColor="@color/yummlyBrown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instructionsDivider" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+          </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/instructionsLayout">
+
+          <Button
+            android:id="@+id/cancelAddBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yummlyWhite"
+            android:text="@string/cancelBtnTitle"
+            android:textColor="@color/yummlyBrown"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:strokeColor="@color/yummlyBrown"
+            app:strokeWidth="5dp" />
+
+          <Button
+            android:id="@+id/saveFoodBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yummlyWhite"
+            android:text="@string/saveBtnTitle"
+            android:textColor="@color/yummlyBrown"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:strokeColor="@color/yummlyBrown"
+            app:strokeWidth="5dp" />
+        </LinearLayout>
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+  </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

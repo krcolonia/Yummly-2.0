@@ -13,5 +13,22 @@
   <string name="helpOpt">Help</string>
   <string name="about">About Us</string>
 
+  <string name="addTitle">Add New Food</string>
+
+  <string name="nameHint">Food Name</string>
+  <string name="imageHint">Select Food Image...</string>
+
+  <string name="ingredientsTitle">Ingredients</string>
+  <string name="instructionsTitle">Instructions</string>
+
+  <string name="ingredientsHint">Add your ingredients here...</string>
+  <string name="instructionsHint">Add your instructions here...</string>
+
+  <string name="cancelBtnTitle">Cancel</string>
+  <string name="saveBtnTitle">Save Food</string>
+
   <string name="foodPlacehold">FOOD NAME</string>
+
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

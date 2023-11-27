@@ -4,30 +4,35 @@
     <!-- Primary brand color. -->
     <item name="colorPrimary">@color/yummlyYellow</item>
     <item name="colorPrimaryVariant">@color/yummlyYellow</item>
-    <item name="colorOnPrimary">@color/yummlyWhite</item>
+    <item name="colorOnPrimary">@color/black</item>
     <!-- Secondary brand color. -->
     <item name="colorSecondary">@color/yummlyRed</item>
     <item name="colorSecondaryVariant">@color/yummlyRed</item>
-    <item name="colorOnSecondary">@color/black</item>
+    <item name="colorOnSecondary">@color/white</item>
     <!-- Status bar color. -->
     <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    <!-- App Font -->
+    <item name="android:fontFamily">@font/rounded_elegance</item>
+
+    <item name="actionBarTheme">@style/ActionBarStyle</item>
+  </style>
+
+  <style name="NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">@color/yummlyYellow</item>
+    <item name="colorPrimaryVariant">@color/yummlyYellow</item>
+    <item name="colorOnPrimary">@color/black</item>
+    <!-- Secondary brand color. -->
+    <item name="colorSecondary">@color/yummlyRed</item>
+    <item name="colorSecondaryVariant">@color/yummlyRed</item>
+    <item name="colorOnSecondary">@color/white</item>
     <!-- App Font -->
     <item name="android:fontFamily">@font/rounded_elegance</item>
   </style>
 
-  <style name="NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-    <!-- Primary brand color. -->
-    <item name="colorPrimary">@color/yummlyYellow</item>
-    <item name="colorPrimaryVariant">@color/yummlyYellow</item>
-    <item name="colorOnPrimary">@color/yummlyWhite</item>
-    <!-- Secondary brand color. -->
-    <item name="colorSecondary">@color/yummlyRed</item>
-    <item name="colorSecondaryVariant">@color/yummlyRed</item>
-    <item name="colorOnSecondary">@color/black</item>
-    <!-- Status bar color. -->
-    <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-    <!-- App Font -->
-    <item name="android:fontFamily">@font/rounded_elegance</item>
+  <style name="ActionBarStyle" parent="Base.Theme.Yummly20">
+    <!-- Font Colors -->
+    <item name="android:textColorPrimary">@color/black</item>
   </style>
 
 </resources>
