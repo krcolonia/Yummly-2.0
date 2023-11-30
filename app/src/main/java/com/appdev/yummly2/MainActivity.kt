@@ -3,7 +3,10 @@ package com.appdev.yummly2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
@@ -19,14 +22,14 @@ import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
 
+  // Variable initialization
   private lateinit var mainBinding: ActivityMainBinding
   private lateinit var drawerLayout: DrawerLayout
   private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
   private lateinit var navView: NavigationView
 
   private lateinit var addBtn: FloatingActionButton
-  private lateinit var recyclerView: RecyclerView
-  private lateinit var adapter: FoodAdapter
+  private var currentFragment: Fragment? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -47,7 +50,7 @@ class MainActivity : AppCompatActivity() {
     navView = mainBinding.navigationView
 
     /*
-      Pass the Open and Closwe toggle for the drawer layout listener
+      Pass the Open and Close toggle for the drawer layout listener
       to toggle the button
      */
     drawerLayout.addDrawerListener(actionBarDrawerToggle)
@@ -58,50 +61,63 @@ class MainActivity : AppCompatActivity() {
      */
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+    /*
+      Initializes and adds function to the floatingActionButton
+      that adds a new recipe
+     */
     addBtn = mainBinding.floatingAddBtn
-
     addBtn.setOnClickListener {
       Toast.makeText(applicationContext, "Add new Recipe", Toast.LENGTH_SHORT).show()
       startActivity(Intent(applicationContext, AddFoodActivity::class.java))
     }
 
+    if(savedInstanceState == null) {
+      loadDefaultFragment() // Launches the default fragment, which is the Home page
+    }
+
+
+
     navView.setNavigationItemSelectedListener {
       when(it.itemId) {
-        R.id.nav_allRecipe -> {
-          replaceFragment(FoodListFragment(), "all")
-        }
-        R.id.nav_filterRecipe -> {
-          replaceFragment(FoodListFragment(), "filtered")
-        }
+        R.id.nav_allRecipe,
+        R.id.nav_filterRecipe,
         R.id.nav_userRecipe -> {
-          replaceFragment(FoodListFragment(), "your")
+          replaceFragment(FoodListFragment())
+          addBtn.visibility = View.VISIBLE
+        }
+        R.id.nav_help -> {
+          replaceFragment(HelpFragment())
+          addBtn.visibility = View.GONE
+        }
+        R.id.nav_about -> {
+          replaceFragment(AboutUsFragment())
+          addBtn.visibility = View.GONE
         }
       }
       true
     }
 
   }
+  
 
-  private fun replaceFragment(fragment: Fragment, title: String) {
-    val fragmentManager = supportFragmentManager
-    val fragmentTransaction = fragmentManager.beginTransaction()
-    fragmentTransaction.replace(R.id.AppFrameLayout, fragment)
-    fragmentTransaction.commit()
+  override fun onCreateOptionsMenu(menu: Menu?) : Boolean {
+    menuInflater.inflate(R.menu.search, menu)
+    var item = menu?.findItem(R.id.search)
+    val searchView = item?.actionView as SearchView
 
-    drawerLayout.closeDrawer(GravityCompat.START)
-    Toast.makeText(applicationContext, "Showing $title Recipes", Toast.LENGTH_SHORT).show()
+    searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
+      override fun onQueryTextSubmit(query: String?): Boolean {
+        (currentFragment as? FoodListFragment)?.searchFood(query)
+        return false
+      }
+
+      override fun onQueryTextChange(query: String?): Boolean {
+        (currentFragment as? FoodListFragment)?.searchFood(query)
+        return false
+      }
+    })
+    return super.onCreateOptionsMenu(menu)
   }
-
-  override fun onStart() {
-    super.onStart()
-//    adapter.startListening()
-  }
-
-  override fun onStop() {
-    super.onStop()
-//    adapter.stopListening()
-  }
-
 
   /*
     Override the onOptionsItemSelected() function to implement the
@@ -127,5 +143,22 @@ class MainActivity : AppCompatActivity() {
     else {
       super.onBackPressed()
     }
+  }
+
+  private fun replaceFragment(fragment: Fragment) {
+    currentFragment = fragment
+    supportFragmentManager.beginTransaction()
+      .replace(R.id.AppFrameLayout, fragment)
+      .commit()
+
+    drawerLayout.closeDrawer(GravityCompat.START)
+  }
+
+  private fun loadDefaultFragment() {
+    val homeFragment = FoodListFragment() // could change, maybe make home fragment??
+    currentFragment = homeFragment
+    supportFragmentManager.beginTransaction()
+      .replace(R.id.AppFrameLayout, homeFragment)
+      .commit()
   }
 }

@@ -1,10 +1,12 @@
 <resources>
+  <!-- Default App Name -->
   <string name="app_name">Yummly 2.0</string>
 
   <!-- To toggle the open close button of nav drawer -->
   <string name="nav_open">Open</string>
   <string name="nav_close">Close</string>
 
+  <!-- String values for Navigation Drawer -->
   <string name="viewSubtitle">View Recipes</string>
   <string name="viewAll">All Recipes</string>
   <string name="filterRecipe">Filter Recipes</string>
@@ -13,8 +15,10 @@
   <string name="helpOpt">Help</string>
   <string name="about">About Us</string>
 
+  <!-- Toast Message for adding food -->
   <string name="addTitle">Add New Food</string>
 
+  <!-- Hints and Titles for the Add Food/Recipe Screen -->
   <string name="nameHint">Food Name</string>
   <string name="imageHint">Select Food Image...</string>
 
@@ -27,8 +31,61 @@
   <string name="cancelBtnTitle">Cancel</string>
   <string name="saveBtnTitle">Save Food</string>
 
+  <!-- Placeholder for FoodList item -->
   <string name="foodPlacehold">FOOD NAME</string>
 
+  <!-- String values for the About Us Page -->
+  <string name="companyName">KurtIc Dynamics</string>
+  <string name="kurticDesc">  Where developers paint their imagination, turning abstract ideas into functional reality.
+                                Each line is a stroke, and every bug is an opportunity to refine the masterpiece.
+                                Embrace the challenge, for in the realm of coding,
+                                every keystroke is a brushstroke,
+                                crafting the future of technology </string>
+
+
+  <string name="devTitle">Developers</string>
+  <string name="dev1">Kurt Robin P. Colonia</string>
+  <string name="dev2">Dominic O. Ramos</string>
+
+  <string name="footer">This app is created with:</string>
+
+  <!-- Help Screen string values -->
+  <string name="helpTitle">User Manual</string>
+  <string name="help1">Adding Your Recipe - A Quick Guide:</string>
+  <string name="help2">Adding Your Recipe - A Quick Guide:</string>
+  <string name="help3">Explore All Recipes:</string>
+  <string name="help4">Filter Recipes by Origin:</string>
+  <string name="help5">Find Your Own Creations - "My Recipe":</string>
+  <string name="editTitle">Edit Recipe</string>
+
+  <!-- Food origin string array -->
+  <string-array name="recipeOrigin">
+    <item>Choose Food\'s Country of Origin</item>
+    <item>Italian</item>
+    <item>Chinese</item>
+    <item>Indian</item>
+    <item>Mexican</item>
+    <item>Japanese</item>
+    <item>Greek</item>
+    <item>Thai</item>
+    <item>Moroccan</item>
+    <item>Lebanese</item>
+    <item>American</item>
+    <item>Brazilian</item>
+    <item>Vietnamese</item>
+    <item>Turkish</item>
+    <item>Filipino</item>
+  </string-array>
+
+  <!-- Edit Screen string values -->
+  <string name="editNameRecipe">Recipe Name: </string>
+  <string name="editIngredientsRecipe">Recipe Ingredients: </string>
+  <string name="editInstructionsRecipe">Recipe Instructions: </string>
+  <string name="editImageRecipe">Recipe Image Profile: </string>
+  <string name="editOriginRecipe">Recipe Origin: </string>
+  <string name="editBtn">Update Recipe</string>
+  <string name="deleteBtn">Delete Recipe</string>
+  <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

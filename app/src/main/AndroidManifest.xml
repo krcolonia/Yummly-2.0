@@ -13,10 +13,8 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/NoActionBar"
+    android:screenOrientation="portrait"
     tools:targetApi="31">
-    <activity
-      android:name=".ViewRecipe"
-      android:exported="false" />
     <activity
       android:name=".SplashScreen"
       android:exported="true">
@@ -33,6 +31,10 @@
     <activity
       android:name=".AddFoodActivity"
       android:exported="false" />
+    <activity
+      android:name=".ViewRecipe"
+      android:exported="false"
+      android:theme="@style/Theme.YummlyDefault"/>
   </application>
 
 </manifest>

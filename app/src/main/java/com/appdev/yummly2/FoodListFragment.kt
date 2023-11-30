@@ -51,6 +51,21 @@ class FoodListFragment : Fragment() {
     adapter.stopListening()
   }
 
+  fun searchFood(str: String?) {
+    if(::recyclerView.isInitialized) {
+      val options: FirebaseRecyclerOptions<Food> = FirebaseRecyclerOptions.Builder<Food>()
+        .setQuery(FirebaseDatabase.getInstance().reference.child("foods")
+          .orderByChild("b_name")
+          .startAt(str)
+          .endAt("$str~"), Food::class.java)
+        .build()
+
+      adapter = FoodAdapter(options)
+      adapter.startListening()
+      recyclerView.adapter = adapter
+    }
+  }
+
   companion object {
     @JvmStatic
     fun newInstance() = FoodListFragment()

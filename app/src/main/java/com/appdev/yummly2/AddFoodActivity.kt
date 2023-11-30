@@ -1,26 +1,27 @@
 package com.appdev.yummly2
 
+import android.R
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.provider.OpenableColumns
-import android.view.KeyEvent
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.TextView
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.appdev.yummly2.databinding.ActivityAddFoodBinding
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import java.io.IOException
+
 
 class AddFoodActivity : AppCompatActivity() {
 
@@ -75,13 +76,13 @@ class AddFoodActivity : AppCompatActivity() {
         return@setOnClickListener
       }
 
-      var foodIngredients_up = foodIngredients.text.toString()//.replace("\n", "\\n")
+      var foodIngredients_up = foodIngredients.text.toString()
       if(foodIngredients_up.isEmpty()) {
         validateInput("ingredients")
         return@setOnClickListener
       }
 
-      var foodInstructions_up = foodInstructions.text.toString()//.replace("\n", "\\n")
+      var foodInstructions_up = foodInstructions.text.toString()
       if(foodInstructions_up.isEmpty()) {
         validateInput("instructions")
         return@setOnClickListener
@@ -170,7 +171,7 @@ class AddFoodActivity : AppCompatActivity() {
   }
 
   private fun validateInput(info: String) {
-    Toast.makeText(applicationContext, "Food\'s $info is empty!", Toast.LENGTH_SHORT).show()
+    Toast.makeText(applicationContext, "Please enter the food's $info.", Toast.LENGTH_SHORT).show()
   }
 
 }
