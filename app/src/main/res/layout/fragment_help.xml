@@ -14,265 +14,296 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.card.MaterialCardView
-      android:id="@+id/cardView4"
-      android:layout_width="356dp"
-      android:layout_height="70dp"
-      android:layout_marginTop="16dp"
+      android:id="@+id/titleCardView"
+      android:layout_width="0dp"
+      android:layout_height="100dp"
+      android:layout_margin="15dp"
+      app:cardBackgroundColor="@color/yummlyYellow"
       app:cardCornerRadius="15dp"
-      app:cardElevation="25dp"
-      app:cardMaxElevation="100dp"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.49"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       app:strokeColor="@color/yummlyBrown"
       app:strokeWidth="5dp">
 
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scaleType="centerCrop"
+          android:src="@drawable/header" />
+
+        <androidx.cardview.widget.CardView
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          app:cardBackgroundColor="@color/translucentBlack"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
       <TextView
-        android:id="@+id/aboutUs_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:text="@string/helpTitle"
-        android:textSize="24sp" />
+        android:textColor="@color/yummlyWhite"
+        android:textSize="28sp"
+        android:textStyle="bold" />
     </com.google.android.material.card.MaterialCardView>
 
-    <androidx.cardview.widget.CardView
-      android:id="@+id/addRecipeView"
-      android:layout_width="400dp"
-      android:layout_height="169dp"
-      android:layout_marginTop="50dp"
-      app:cardBackgroundColor="#D32F2F"
-      app:cardCornerRadius="5dp"
-      app:cardElevation="25dp"
-      app:cardMaxElevation="25dp"
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/addHelpCard"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="15dp"
+      app:cardBackgroundColor="@color/yummlyWhite"
+      app:cardCornerRadius="15dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/cardView4">
+      app:layout_constraintTop_toBottomOf="@id/titleCardView"
+      app:strokeColor="@color/yummlyRed"
+      app:strokeWidth="5dp">
 
       <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
 
-        <androidx.cardview.widget.CardView
-          android:layout_width="380dp"
-          android:layout_height="150dp"
+        <TextView
+          android:id="@+id/addHelpTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:text="@string/help1"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+          android:id="@+id/help1Img"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent">
-
-          <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-              android:id="@+id/addRecipeTxt"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-              android:text="@string/help1" />
-
-            <ImageView
-              android:id="@+id/addRecipeImg"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:src="@drawable/helpone" />
-          </LinearLayout>
-        </androidx.cardview.widget.CardView>
+          app:layout_constraintTop_toBottomOf="@+id/addHelpTitle"
+          app:srcCompat="@drawable/helpone" />
       </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-      android:id="@+id/edit_deleteView"
-      android:layout_width="400dp"
-      android:layout_height="169dp"
-      android:layout_marginTop="50dp"
-      app:cardBackgroundColor="#D32F2F"
-      app:cardCornerRadius="5dp"
-      app:cardElevation="25dp"
-      app:cardMaxElevation="25dp"
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/editHelpCard"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="15dp"
+      app:cardBackgroundColor="@color/yummlyWhite"
+      app:cardCornerRadius="15dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/addRecipeView">
+      app:layout_constraintTop_toBottomOf="@id/addHelpCard"
+      app:strokeColor="@color/yummlyRed"
+      app:strokeWidth="5dp">
 
       <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
 
-        <androidx.cardview.widget.CardView
-          android:layout_width="380dp"
-          android:layout_height="150dp"
+        <TextView
+          android:id="@+id/editHelpTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:text="@string/help2"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+          android:id="@+id/help2Img"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent">
-
-          <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-              android:id="@+id/editDeleteTxt"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-              android:text="@string/help1" />
-
-            <ImageView
-              android:id="@+id/editDeleteImg"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:src="@drawable/helpone" />
-          </LinearLayout>
-        </androidx.cardview.widget.CardView>
+          app:layout_constraintTop_toBottomOf="@+id/editHelpTitle"
+          app:srcCompat="@drawable/helptwo" />
       </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-      android:id="@+id/allRecipeView"
-      android:layout_width="400dp"
-      android:layout_height="169dp"
-      android:layout_marginTop="50dp"
-      app:cardBackgroundColor="#D32F2F"
-      app:cardCornerRadius="5dp"
-      app:cardElevation="25dp"
-      app:cardMaxElevation="25dp"
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/deleteHelpCard"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="15dp"
+      app:cardBackgroundColor="@color/yummlyWhite"
+      app:cardCornerRadius="15dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/edit_deleteView">
+      app:layout_constraintTop_toBottomOf="@id/editHelpCard"
+      app:strokeColor="@color/yummlyRed"
+      app:strokeWidth="5dp">
 
       <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
 
-        <androidx.cardview.widget.CardView
-          android:layout_width="380dp"
-          android:layout_height="150dp"
+        <TextView
+          android:id="@+id/deleteHelpTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:text="@string/help3"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+          android:id="@+id/help3Img"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent">
-
-          <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-              android:id="@+id/allRecipeTxt"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-              android:text="@string/help3" />
-
-            <ImageView
-              android:id="@+id/allRecipeImg"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:src="@drawable/helpthree" />
-          </LinearLayout>
-        </androidx.cardview.widget.CardView>
+          app:layout_constraintTop_toBottomOf="@+id/deleteHelpTitle"
+          app:srcCompat="@drawable/helpthree" />
       </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-      android:id="@+id/filterRecipeView"
-      android:layout_width="400dp"
-      android:layout_height="169dp"
-      android:layout_marginTop="50dp"
-      app:cardBackgroundColor="#D32F2F"
-      app:cardCornerRadius="5dp"
-      app:cardElevation="25dp"
-      app:cardMaxElevation="25dp"
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/filterHelpCard"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="15dp"
+      app:cardBackgroundColor="@color/yummlyWhite"
+      app:cardCornerRadius="15dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/allRecipeView">
+      app:layout_constraintTop_toBottomOf="@id/deleteHelpCard"
+      app:strokeColor="@color/yummlyRed"
+      app:strokeWidth="5dp">
 
       <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
 
-        <androidx.cardview.widget.CardView
-          android:layout_width="380dp"
-          android:layout_height="150dp"
+        <TextView
+          android:id="@+id/filterHelpTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:text="@string/help5"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+          android:id="@+id/help5Img"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent">
-
-          <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-              android:id="@+id/filterRecipeTxt"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-              android:text="@string/help4" />
-
-            <ImageView
-              android:id="@+id/filterRecipeImg"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:src="@drawable/helpfour" />
-          </LinearLayout>
-        </androidx.cardview.widget.CardView>
+          app:layout_constraintTop_toBottomOf="@+id/filterHelpTitle"
+          app:srcCompat="@drawable/helpfive" />
       </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-      android:id="@+id/myRecipeView"
-      android:layout_width="400dp"
-      android:layout_height="169dp"
-      android:layout_marginTop="50dp"
-      app:cardBackgroundColor="#D32F2F"
-      app:cardCornerRadius="5dp"
-      app:cardElevation="25dp"
-      app:cardMaxElevation="25dp"
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/viewAllHelpCard"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="15dp"
+      app:cardBackgroundColor="@color/yummlyWhite"
+      app:cardCornerRadius="15dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/filterHelpCard"
+      app:strokeColor="@color/yummlyRed"
+      app:strokeWidth="5dp">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <TextView
+          android:id="@+id/viewAllHelpTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:text="@string/help4"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+          android:id="@+id/help4Img"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/viewAllHelpTitle"
+          app:srcCompat="@drawable/helpfour" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/userRecipeHelpCard"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="15dp"
+      app:cardBackgroundColor="@color/yummlyWhite"
+      app:cardCornerRadius="15dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/filterRecipeView">
+      app:layout_constraintTop_toBottomOf="@id/viewAllHelpCard"
+      app:strokeColor="@color/yummlyRed"
+      app:strokeWidth="5dp">
 
       <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
 
-        <androidx.cardview.widget.CardView
-          android:layout_width="380dp"
-          android:layout_height="150dp"
+        <TextView
+          android:id="@+id/userRecipeHelpTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          android:text="@string/help6"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+          android:id="@+id/help6Img"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent">
-
-          <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-              android:id="@+id/myRecipeTxt"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-              android:text="@string/help5" />
-
-            <ImageView
-              android:id="@+id/myRecipeImg"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:src="@drawable/helpfive" />
-          </LinearLayout>
-        </androidx.cardview.widget.CardView>
+          app:layout_constraintTop_toBottomOf="@+id/userRecipeHelpTitle"
+          app:srcCompat="@drawable/helpsix" />
       </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 
+    </com.google.android.material.card.MaterialCardView>
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

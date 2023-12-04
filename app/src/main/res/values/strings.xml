@@ -1,6 +1,6 @@
 <resources>
   <!-- Default App Name -->
-  <string name="app_name">Yummly 2.0</string>
+  <string name="app_name">Yummly</string>
 
   <!-- To toggle the open close button of nav drawer -->
   <string name="nav_open">Open</string>
@@ -22,6 +22,7 @@
   <string name="nameHint">Food Name</string>
   <string name="imageHint">Select Food Image...</string>
 
+  <string name="originTitle">Origin</string>
   <string name="ingredientsTitle">Ingredients</string>
   <string name="instructionsTitle">Instructions</string>
 
@@ -51,12 +52,16 @@
 
   <!-- Help Screen string values -->
   <string name="helpTitle">User Manual</string>
-  <string name="help1">Adding Your Recipe - A Quick Guide:</string>
-  <string name="help2">Adding Your Recipe - A Quick Guide:</string>
-  <string name="help3">Explore All Recipes:</string>
-  <string name="help4">Filter Recipes by Origin:</string>
-  <string name="help5">Find Your Own Creations - "My Recipe":</string>
+  <string name="help1">Adding your Recipes</string>
+  <string name="help2">Editing your Recipes</string>
+  <string name="help3">Deleting your Recipes</string>
+  <string name="help4">Explore All Recipes:</string>
+  <string name="help5">Filter Recipes by Origin:</string>
+  <string name="help6">Find Your Own Creations - "My Recipe":</string>
   <string name="editTitle">Edit Recipe</string>
+
+  <!-- Filter Title -->
+  <string name="filterTitle">Filter:</string>
 
   <!-- Food origin string array -->
   <string-array name="recipeOrigin">
@@ -77,15 +82,44 @@
     <item>Filipino</item>
   </string-array>
 
+  <string-array name="filterOrigin">
+    <item>Show All</item>
+    <item>Italian</item>
+    <item>Chinese</item>
+    <item>Indian</item>
+    <item>Mexican</item>
+    <item>Japanese</item>
+    <item>Greek</item>
+    <item>Thai</item>
+    <item>Moroccan</item>
+    <item>Lebanese</item>
+    <item>American</item>
+    <item>Brazilian</item>
+    <item>Vietnamese</item>
+    <item>Turkish</item>
+    <item>Filipino</item>
+  </string-array>
+
   <!-- Edit Screen string values -->
-  <string name="editNameRecipe">Recipe Name: </string>
-  <string name="editIngredientsRecipe">Recipe Ingredients: </string>
-  <string name="editInstructionsRecipe">Recipe Instructions: </string>
-  <string name="editImageRecipe">Recipe Image Profile: </string>
-  <string name="editOriginRecipe">Recipe Origin: </string>
   <string name="editBtn">Update Recipe</string>
   <string name="deleteBtn">Delete Recipe</string>
-  <!-- TODO: Remove or change this placeholder text -->
-  <string name="hello_blank_fragment">Hello blank fragment</string>
+
+  <!-- Login and Registration string values -->
+  <string name="usernameHint">Username</string>
+  <string name="emailHint">Email Address</string>
+  <string name="passwordHint">Password</string>
+  <string name="confirmPassHint">Confirm Password</string>
+  <string name="click_to_login">Click to Login</string>
+  <string name="click_to_register">Click to Register</string>
+  <string name="accountGrp">Account</string>
+  <string name="login">Login</string>
+  <string name="register">Register</string>
+  <string name="logout">Logout</string>
+
+  <!-- Terms of Service and Privacy Policy -->
+  <string name="tosTitle">Terms of Service</string>
+
+  <string name="privPolTitle">Privacy Policy</string>
+
 
 </resources>

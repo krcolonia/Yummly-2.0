@@ -168,6 +168,36 @@
       </com.google.android.material.card.MaterialCardView>
 
       <com.google.android.material.card.MaterialCardView
+        android:id="@+id/originInputCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardBackgroundColor="@color/yummlyWhite"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameInputCard"
+        app:strokeColor="@color/yummlyBrown"
+        app:strokeWidth="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+          <Spinner
+            android:id="@+id/foodOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+      <com.google.android.material.card.MaterialCardView
         android:id="@+id/ingredientsCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -176,7 +206,7 @@
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameInputCard"
+        app:layout_constraintTop_toBottomOf="@id/originInputCard"
         app:strokeColor="@color/yummlyBrown"
         app:strokeWidth="5dp">
 

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/gradient_background"
+  tools:context=".RegisterActivity">
+
+  <com.google.android.material.card.MaterialCardView
+    android:id="@+id/titleCardView"
+    android:layout_width="0dp"
+    android:layout_height="100dp"
+    android:layout_margin="15dp"
+    app:cardBackgroundColor="@color/yummlyYellow"
+    app:cardCornerRadius="15dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:strokeColor="@color/yummlyBrown"
+    app:strokeWidth="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header" />
+
+      <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/translucentBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+      android:id="@+id/textView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:text="@string/login"
+      android:textColor="@color/yummlyWhite"
+      android:textSize="28sp"
+      android:textStyle="bold" />
+  </com.google.android.material.card.MaterialCardView>
+
+  <com.google.android.material.card.MaterialCardView
+    android:id="@+id/loginInputCard"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardBackgroundColor="@color/yummlyWhite"
+    app:cardCornerRadius="15dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/titleCardView"
+    app:strokeColor="@color/yummlyBrown"
+    app:strokeWidth="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="5dp">
+
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/emailLoginCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/yummlyBrown"
+        app:strokeWidth="5dp">
+
+        <EditText
+          android:id="@+id/emailLoginTxt"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="8dp"
+          android:background="@null"
+          android:drawableStart="@drawable/icon_emailadd"
+          android:drawablePadding="10dp"
+          android:drawableTint="@color/yummlyBrown"
+          android:gravity="center_vertical"
+          android:hint="@string/emailHint"
+          android:inputType="textEmailAddress"
+          android:textColor="@color/yummlyBrown"
+          android:textStyle="bold" />
+
+      </com.google.android.material.card.MaterialCardView>
+
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/passwordLoginCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailLoginCard"
+        app:strokeColor="@color/yummlyBrown"
+        app:strokeWidth="5dp">
+
+        <EditText
+          android:id="@+id/passwordTxt"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="8dp"
+          android:background="@null"
+          android:drawableStart="@drawable/icon_password"
+          android:drawablePadding="10dp"
+          android:drawableTint="@color/yummlyBrown"
+          android:gravity="center_vertical"
+          android:hint="@string/passwordHint"
+          android:inputType="textPassword"
+          android:textColor="@color/yummlyBrown"
+          android:textStyle="bold" />
+
+      </com.google.android.material.card.MaterialCardView>
+
+      <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp"
+        android:text="@string/login"
+        android:textColor="@color/yummlyBrown"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLoginCard"
+        app:strokeColor="@color/yummlyBrown"
+        app:strokeWidth="5dp" />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Don't have an account yet? "
+          android:textSize="16sp" />
+
+        <TextView
+          android:id="@+id/registerTxt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/register"
+          android:textColor="#304FFE"
+          android:textSize="16sp"
+          android:textStyle="bold" />
+
+      </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

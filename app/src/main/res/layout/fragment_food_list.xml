@@ -6,15 +6,50 @@
   android:layout_height="match_parent"
   tools:context=".FoodListFragment">
 
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/FilterLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/yummlyYellow"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+      android:id="@+id/filterTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="5dp"
+      android:paddingStart="10dp"
+      android:paddingTop="7dp"
+      android:text="@string/filterTitle"
+      android:textColor="@color/yummlyBrown"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+      android:id="@+id/filterSpinner"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="5dp"
+      android:paddingBottom="2dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/filterTitle" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
   <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/foodRecycler"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="0dp"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp"
     android:layout_marginBottom="10dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    app:layout_constraintTop_toBottomOf="@+id/FilterLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

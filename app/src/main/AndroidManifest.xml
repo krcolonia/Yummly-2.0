@@ -11,10 +11,27 @@
     android:icon="@mipmap/ic_launcher"
     android:label="@string/app_name"
     android:roundIcon="@mipmap/ic_launcher_round"
+    android:screenOrientation="portrait"
     android:supportsRtl="true"
     android:theme="@style/NoActionBar"
-    android:screenOrientation="portrait"
     tools:targetApi="31">
+
+    <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+      <meta-data
+        android:name="com.google.firebase.appcheck.api_key"
+        android:value="AIzaSyAd-u7-tk39YbAe9ocKHUq8JSO2Nq2AOgo"
+        />
+    </service>
+
+    <activity
+      android:name=".LoginActivity"
+      android:exported="false" />
+    <activity
+      android:name=".RegisterActivity"
+      android:exported="false" />
+    <activity
+      android:name=".EditFoodActivity"
+      android:exported="false" />
     <activity
       android:name=".SplashScreen"
       android:exported="true">
@@ -34,7 +51,7 @@
     <activity
       android:name=".ViewRecipe"
       android:exported="false"
-      android:theme="@style/Theme.YummlyDefault"/>
+      android:theme="@style/Theme.YummlyDefault" />
   </application>
 
 </manifest>

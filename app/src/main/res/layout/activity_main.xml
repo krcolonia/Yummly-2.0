@@ -15,6 +15,16 @@
     android:layout_height="match_parent"
     android:background="@color/yummlyWhite">
 
+    <FrameLayout
+      android:id="@+id/AppFrameLayout"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/floatingAddBtn"
@@ -25,17 +35,6 @@
       android:src="@drawable/icon_add"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent" />
-
-    <FrameLayout
-      android:id="@+id/AppFrameLayout"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
-
-    </FrameLayout>
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

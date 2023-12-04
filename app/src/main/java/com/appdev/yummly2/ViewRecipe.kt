@@ -62,11 +62,13 @@ class ViewRecipe : AppCompatActivity() {
   }
 
   private fun updateUI(food: Food) {
-    food.e_imageFileName?.let { loadImageFromFirebase(it, recipeBinding.foodImg) }
+    food.g_imageFileName?.let { loadImageFromFirebase(it, recipeBinding.foodImg) }
 
-    recipeBinding.foodName.text = food.b_name
-    recipeBinding.ingredientsTxt.text = food.c_ingredients?.let { addBullets(it) }
-    recipeBinding.instructionsTxt.text = food.d_instructions?.let{ addNumbers(it) }
+    recipeBinding.foodName.text = food.c_name
+    recipeBinding.authorName.text = intent.getStringExtra("authName")
+    recipeBinding.originTxt.text = "${food.d_origin} Cuisine"
+    recipeBinding.ingredientsTxt.text = food.e_ingredients?.let { addBullets(it) }
+    recipeBinding.instructionsTxt.text = food.f_instructions?.let{ addNumbers(it) }
   }
 
   private fun loadImageFromFirebase(imageFileName: String, imageView: ImageView) {
